@@ -8,25 +8,59 @@
 </head>
 <body>
     <div id = "left-pannel" class="left-panel">
-        <img src="images/user.png" alt="User Image" id="user-image">
+        <img src="images/jinx.jpg" alt="User Image" id="user-image">
         <div id = "mid-buttons" class="mid-buttons">    
-            <button id = "clubs-button" class = "nav-button">Clubs</button>
-            <button id = "events-button" class = "nav-button">Events</button>
-            <button id = "notification-button" class = "nav-button">Notification</button>
+            <button id = "clubs-button" class = "nav-button" onclick="moveToClubs()">Clubs</button>
+            <button id = "events-button" class = "nav-button" onclick="moveToEvents()">Events</button>
+            <button id = "notification-button" class = "nav-button" onclick="moveToNotifications()">Notification</button>
         </div>
         <div id = "bottom-buttons" class="bottom-buttons">
-            <button id = "logout-button" class = "nav-button">Logout</button>
+            <button id = "logout-button" class = "nav-button" onclick="">Logout</button>
         </div>
     </div>
 
     <div id="main-body" class="main-body">
         <div id="user-details" class="user-details">
-            <h1 id="user-name">User Name</h1>
-            <p id="user-email">User Email</p>
-            <p id="user-phone"></p>
+            <h1 id="user-name">User Details</h1>
+            <p id="user-email">Email: 24eg107d10@anurag.edu.in</p>
+            <p id="user-branch">Branch: AI & ML</p>
+        </div>
+
+        <div id="joined-clubs" class="joined-clubs">
+            <h1 id="club-heading">Clubs</h1>
+            <div id="clubs-list" class="clubs-list">
+                <div id="club1" class="club">
+                    <h2 id="club1-name">Club 1</h2>
+                    <p id="club1-description">Description of Club 1</p>
+                </div>
+                <div id="club2" class="club">
+                    <h2 id="club2-name">Club 2</h2>
+                    <p id="club2-description">Description of Club 2</p>
+                </div>
+                <div id="club3" class="club">
+                    <h2 id="club3-name">Club 3</h2>
+                    <p id="club3-description">Description of Club 3</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="joined-events" class="joined-events">
+            <h1 id="event-heading">Events</h1>
+            <div id="events-list" class="events-list">
+                <div id="event1" class="event">
+                    <h2 id="event1-name">Event 1</h2>
+                    <p id="event1-description">Description of Event 1</p>
+                </div>
+                <div id="event2" class="event">
+                    <h2 id="event2-name">Event 2</h2>
+                    <p id="event2-description">Description of Event 2</p>
+                </div>
+                <div id="event3" class="event">
+                    <h2 id="event3-name">Event 3</h2>
+                    <p id="event3-description">Description of Event 3</p>
+                </div>
+            </div>
     </div>
-
-
     <script src="profile.js"></script>
 </body>
 </html>
