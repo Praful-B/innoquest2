@@ -9,7 +9,7 @@ body {
 }
 
 .left-panel {
-  width: 250px;
+  width: 150px;
   background: linear-gradient(135deg, #1976d2, #0d47a1);
   color: white;
   height: 100vh;
