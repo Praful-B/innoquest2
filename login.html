@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesLogin.css"></link>
+    <title>AU Social</title>
+</head>
+<body>
+    
+    <div id = "loginBox">
+        <div id = "userInput">
+            <p id="enterDetailsLabel">Enter your details: </p>
+            <form name = "userInput" id="loginForm" onsubmit=validateLogin(event)>
+                <label for = "gmailLabel" id="gmailLabel" >Gmail: </label>
+                <input type = "email" id = "userGmail" name = "userGmail"><br><br>
+                <label for="passwordLabel" id="passwordLabel">Password: </label>
+                <input type="password" id = "userPassword" name="userPassword"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src = "scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+#error-message {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #fff3f3;
+    font-size: 14px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; /*center*/
+    background-image: url('images/auBackground.jpeg');
+    background-size: cover;
+}
+
+#loginBox {
+    margin-right: 100px;  /* Adjust this value to control distance from right edge */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+#userInput {
+    padding: 10px;
+}
+
+#enterDetailsLabel{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#gmailLabel , #passwordLabel {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #c0202d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #861221;
+    font-family: Arial, Helvetica, sans-serif;
+}

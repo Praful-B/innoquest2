@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Campus Connect</title>
+    <link rel="stylesheet" href="stylesNotification.css">
+
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <span>🏛️</span>
+                <span>Campus Connect</span>
+            </div>
+            <div class="menu">
+                <h3>MAIN MENU</h3>
+                <a href="#" class="active">
+                    <span>🔔</span>
+                    <span>Notifications</span>
+                </a>
+                <a href="#">
+                    <span>👤</span>
+                    <span>Profile</span>
+                </a>
+                <a href="#">
+                    <span>👥</span>
+                    <span>Clubs</span>
+                </a>
+                <a href="#">
+                    <span>📅</span>
+                    <span>Events</span>
+                </a>
+                <a href="#">
+                    <span>⚙️</span>
+                    <span>Settings</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="notifications-header">
+                <h1>Notifications</h1>
+                <div class="notification-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="unread">Unread</button>
+                    <button class="filter-btn" data-filter="read">Read</button>
+                </div>
+            </div>
+
+            <div class="notifications-list">
+                <div class="notification-card unread">
+                    <div class="notification-icon">ℹ️</div>
+                    <div class="notification-content">
+                        <h3>New Course Available</h3>
+                        <p>Introduction to AI is now available for registration.</p>
+                        <span class="timestamp">2 hours ago</span>
+                    </div>
+                    <button class="mark-read-btn">✓</button>
+                </div>
+
+                <div class="notification-card unread">
+                    <div class="notification-icon">📅</div>
+                    <div class="notification-content">
+                        <h3>Club Membership Approved</h3>
+                        <p>Your membership request for Toastmasters has been approved.</p>
+                        <span class="timestamp">1 day ago</span>
+                    </div>
+                    <button class="mark-read-btn">✓</button>
+                </div>
+
+                <div class="notification-card">
+                    <div class="notification-icon">📢</div>
+                    <div class="notification-content">
+                        <h3>Event Reminder</h3>
+                        <p>Photography Club meeting starts in 1 hour.</p>
+                        <span class="timestamp">3 days ago</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="notification.js"></script>
+</body>
+</html>
