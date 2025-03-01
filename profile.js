@@ -8,5 +8,8 @@ function moveToProfile(){
     window.location.href = 'profile.html';
 }
 function moveToNotifications(){
-    window.location.href = 'notification.html';
+    window.location.href = 'notifications.html';
+}
+function logOut(){
+    window.location.href = 'login.html';
 }

@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+.joined-clubs .club a:link{
+  text-decoration: none;
+  color: #0d47a1;
+}
+.joined-clubs .club a:hover{
+  transform: translateY(-2px);
+  text-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+}
+.joined-clubs .club a:visited{
+  text-decoration: none;
+  color: #0d47a1;
+}
+
+.joined-events .event a:link{
+  text-decoration: none;
+  color: #0d47a1;
+}
+.joined-events .event a:hover{
+  transform: translateY(-2px);
+  text-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+}
+.joined-events .club a:visited{
+  text-decoration: none;
+  color: #0d47a1;
+}
 
 body {
   font-family: 'Poppins', sans-serif;

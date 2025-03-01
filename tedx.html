@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDxANURAG Club</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f7ff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            color: #333;
+        }
+        
+        .left-panel {
+            width: 280px;
+            background: linear-gradient(135deg, #1976d2, #0d47a1);
+            color: white;
+            padding: 25px;
+            height: 100vh;
+            box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            z-index: 10;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .brand-logo {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+        }
+        
+        .brand-logo i {
+            color: #1565c0;
+            font-size: 20px;
+        }
+        
+        .brand-name {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        
+        .menu-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 15px;
+        }
+        
+        .nav-item {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            margin: 12px 0;
+            padding: 12px 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item i {
+            margin-right: 12px;
+            font-size: 18px;
+            width: 24px;
+            text-align: center;
+        }
+        
+        .nav-item:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .nav-item.active {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-weight: 500;
+        }
+        
+        .profile-section {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            right: 25px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 12px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .profile-section:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .profile-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #64b5f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            border: 2px solid white;
+        }
+        
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .profile-info {
+            flex-grow: 1;
+        }
+        
+        .profile-name {
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .profile-role {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .main-content {
+            flex-grow: 1;
+            padding: 30px 40px;
+            background-color: #f5f9ff;
+            margin-left: 280px; /* Adjusted to match left panel width */
+        }
+        
+        .club-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .club-header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .club-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .club-name {
+            font-size: 32px;
+            font-weight: 600;
+            color: #0d47a1;
+        }
+        
+        .club-description {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin: 20px auto 0;
+            text-align: center;
+        }
+        
+        .posts-section, .events-section {
+            margin-top: 40px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #0d47a1;
+            margin-bottom: 20px;
+        }
+        
+        .post, .event {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .post-title, .event-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .post-content, .event-content {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .back-button {
+            margin-bottom: 20px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-button a:hover {
+            text-decoration: underline;
+        }
+
+        .social-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-link a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .social-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Left Panel -->
+    <div class="left-panel">
+        <!-- Back Button -->
+        <div class="back-button">
+            <a href="#"><i class="fas fa-arrow-left"></i> Back</a>
+        </div>
+
+        <div class="brand">
+            <div class="brand-logo">
+                <i class="fas fa-university"></i>
+            </div>
+            <div class="brand-name">AU SOCIAL</div>
+        </div>
+        
+        <div class="menu-title">Main Menu</div>
+        
+        <a href="#" class="nav-item active">
+            <i class="fas fa-users"></i>
+            <span class="nav-text">Clubs</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="nav-text">Events</span>
+        </a>
+        <a href="#" class="nav-item">
+            <i class="fas fa-bell"></i>
+            <span class="nav-text">Notifications</span>
+        </a>
+        
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-avatar">
+                <img src="profile-pic.jpg" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <div class="profile-name">STUDENT</div>
+                <div class="profile-role">details</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Club Header -->
+        <div class="club-header">
+            <div class="club-header-content">
+                <img src="tedx-logo.png" alt="TEDx Logo" class="club-logo">
+                <div class="club-name">TEDxANURAG</div>
+            </div>
+            <div class="club-description">
+                TEDxANURAG is a platform for ideas worth spreading. We bring together thinkers, innovators, and storytellers to share their unique perspectives and inspire change. Join us to explore groundbreaking ideas and connect with a community of curious minds!
+            </div>
+        </div>
+
+        <!-- Posts Section -->
+        <div class="posts-section">
+            <div class="section-title">Posts</div>
+            <div class="post">
+                <div class="post-title">Upcoming TEDx Event: "Ideas in Motion"</div>
+                <div class="post-content">
+                    Join us for our next TEDx event, where we explore the theme "Ideas in Motion." Hear from inspiring speakers and engage in thought-provoking discussions.
+                </div>
+            </div>
+            <div class="post">
+                <div class="post-title">Call for Speakers: TEDxANURAG 2024</div>
+                <div class="post-content">
+                    Are you passionate about sharing your ideas? Apply now to be a speaker at TEDxANURAG 2024 and inspire our community!
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Section -->
+        <div class="events-section">
+            <div class="section-title">Events Conducted</div>
+            <div class="event">
+                <div class="event-title">TEDxANURAG 2023: "Breaking Boundaries"</div>
+                <div class="event-content">
+                    Our 2023 event was a huge success! We explored the theme "Breaking Boundaries" with incredible speakers and engaging discussions.
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Link -->
+        <div class="social-link">
+            <a href="https://www.instagram.com/tedxanuragu/?hl=en" target="_blank"><i class="fab fa-instagram"></i> Follow us on Instagram</a>
+        </div>
+    </div>
+</body>
+</html>

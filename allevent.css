@@ -1,0 +1,126 @@
+
+a:link{
+    text-decoration: none;
+    color: #000000;
+}
+a:hover{
+    transform: translateY(-2px);
+    text-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+}
+a:visited{
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-sidebar a:link{
+    text-decoration: none;
+    color: #ffffff;
+}
+.nav-sidebar a:hover{
+    transform: translateY(-2px);
+    text-shadow: 0 6px 5px rgba(0, 0, 0, 0.2);
+}
+.nav-sidebar a:visited{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #f4f4f4;
+    height: 100vh;
+}
+
+/* Navigation Sidebar */
+.nav-sidebar {
+    width: 150px;
+    background: linear-gradient(135deg, #1976d2, #0d47a1);
+    color: white;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+    align-items: center; /* Center children horizontally */
+}
+
+.nav-sidebar-logo {
+    align-self: flex-start; /* Keep logo aligned to the left/top */
+    margin-bottom: 40px; /* Increased space below logo */
+    width: 100%; /* Make logo container full width */
+}
+
+.nav-sidebar button {
+    background-color: #3498D8;
+    color: white;
+    border: none; 
+    padding: 15px;
+    margin: 20px 0; /* Keep vertical margin */
+    cursor: pointer;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    /* No need to add any additional properties as the parent container 
+       will center these buttons with align-items: center */
+}
+
+.nav-sidebar button:hover {
+    background-color: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    margin-left: 300px; /* Prevent overlap with sidebar */
+    height: 100vh;
+    overflow-y: auto; /* Enables scrolling */
+}
+
+.main-content h1 {
+    margin: 0 0 20px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+.main-content p {
+    margin: 15px 0;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.main-content .register-link {
+    display: inline-block;
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 20px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.main-content .register-link:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+.main-content .event-image {
+    width: 50%;
+    max-height: 700px;
+    object-fit: fill;
+    border-radius: 10px;
+    margin-top: 20px;
+}
